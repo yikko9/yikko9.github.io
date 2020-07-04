@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>JavaSE学习笔记$3 | Yikko blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="面向对象之细节总纳">
+  <meta name="description" content="面向对象之细节总纳note1局部变量和成员变量  定义位置不一样局部变量：方法内部成员变量：类当中">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaSE学习笔记$3">
 <meta property="og:url" content="http://yoursite.com/2020/07/04/note3/index.html">
 <meta property="og:site_name" content="Yikko blog">
-<meta property="og:description" content="面向对象之细节总纳">
+<meta property="og:description" content="面向对象之细节总纳note1局部变量和成员变量  定义位置不一样局部变量：方法内部成员变量：类当中">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-07-04T09:19:28.000Z">
-<meta property="article:modified_time" content="2020-07-04T10:02:19.992Z">
+<meta property="article:modified_time" content="2020-07-04T10:40:04.719Z">
 <meta property="article:author" content="Yikko">
 <meta name="twitter:card" content="summary">
   
@@ -162,41 +162,48 @@
   
 
         
-        <a href="/2020/07/04/note3/" class="archive-article-date">
-  	<time datetime="2020-07-04T09:19:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-04</time>
+        
+<!-- 不蒜子统计 -->
+<span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+  <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+</span>
+
+<a href="/2020/07/04/note3/" class="archive-article-date">
+  <time datetime="2020-07-04T09:19:28.000Z" itemprop="datePublished"><i
+      class="icon-calendar icon"></i>2020-07-04</time>
 </a>
+
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="面向对象之细节总纳"><a href="#面向对象之细节总纳" class="headerlink" title="面向对象之细节总纳"></a>面向对象之细节总纳</h1><a id="more"></a>
-<h5 id="note1"><a href="#note1" class="headerlink" title="note1"></a><font color="#9932CC" size=2 face="微软雅黑">note1</font></h5><p><font color="#FF8825" size=5 face="微软雅黑">局部变量和成员变量</font></p>
+        <h1 id="面向对象之细节总纳"><a href="#面向对象之细节总纳" class="headerlink" title="面向对象之细节总纳"></a>面向对象之细节总纳</h1><h5 id="note1"><a href="#note1" class="headerlink" title="note1"></a><font color="#9932CC" size=2 face="微软雅黑">note1</font></h5><p><font color="#FF8825" size=5 face="微软雅黑">局部变量和成员变量</font></p>
 <ol>
-<li><font color="#0000ff" size=3 face="微软雅黑">定义位置不一样</font><br>  局部变量：方法内部<br>  成员变量：类当中</li>
-<li><font color="#0000ff" size=3 face="微软雅黑">作用范围不一样</font><br>  局部变量：方法内部<br>  成员变量：整个类通用</li>
+<li><font color="#0000ff" size=3 face="微软雅黑">定义位置不一样</font><br>局部变量：方法内部<br>成员变量：类当中<a id="more"></a></li>
+<li><font color="#0000ff" size=3 face="微软雅黑">作用范围不一样</font><br>局部变量：方法内部<br>成员变量：整个类通用</li>
 <li><font color="#0000ff" size=3 face="微软雅黑">默认值不一样</font><br>局部变量：没有默认值<br> 成员变量：有</li>
 <li>内存位置不一样<br>局部变量：栈当中<br>成员变量：堆当中</li>
 <li>生命周期不一样<br>局部变量：随方法进栈诞生，方法出栈消失<br>成员变量：随对象创建诞生，对象被垃圾回收消失</li>
 </ol>
 <h5 id="note2"><a href="#note2" class="headerlink" title="note2"></a><font color="#9932CC" size=2 face="微软雅黑">note2</font></h5><p><font color="#FF8825" size=6 face="微软雅黑">static</font></p>
-<p><strong>1.static关键字修饰成员变量</strong><br>&emsp;&emsp;如果一个成员变量使用了static关键字修饰，这个变量不再属于对象自己，而是属于所在的类，多个对象共享同一份数据。</p>
-<p><strong>2.static关键字修饰成员方法</strong><br>&emsp;&emsp;通过static修饰的方法，就是静态方法，静态方法不属于对象，而是属于类</p>
-<p>&emsp;&emsp;非静态方法：先创建对象，通过对象调用<br>&emsp;&emsp;静态方法：不需创建对象，通过类名调用  </p>
+<p><strong>1.static 关键字修饰成员变量</strong><br>&emsp;&emsp;如果一个成员变量使用了 static 关键字修饰，这个变量不再属于对象自己，而是属于所在的类，多个对象共享同一份数据。</p>
+<p><strong>2.static 关键字修饰成员方法</strong><br>&emsp;&emsp;通过 static 修饰的方法，就是静态方法，静态方法不属于对象，而是属于类<br>&emsp;&emsp;非静态方法：先创建对象，通过对象调用<br>&emsp;&emsp;静态方法：不需创建对象，通过类名调用</p>
 <p><strong>总结：</strong></p>
 <ul>
 <li>静态变量：类名称.静态变量</li>
 <li>静态方法：类名称.静态方法()</li>
-<li>对于本类静态方法，类名称. 可以省略  </li>
+<li>对于本类静态方法，类名称. 可以省略</li>
 </ul>
 <p><font color="#0000FF" size=4 face="微软雅黑">注意事项：</font></p>
 <ol>
-<li>静态不能直接访问非静态<br> 原因：在内存中【先】有静态内容，【后】有非静态内容<br> <font color="#FF5599" size=3 face="微软雅黑">“先人不知道后人，后人知道先人”</font></li>
-<li>静态方法中不能用this。<br> 原因：this代表当前对象，通过谁调用的方法，谁就是当前对象。</li>
+<li>静态不能直接访问非静态<br>原因：在内存中【先】有静态内容，【后】有非静态内容<br><font color="#FF5599" size=3 face="微软雅黑">“先人不知道后人，后人知道先人”</font></li>
+<li>静态方法中不能用 this。<br>原因：this 代表当前对象，通过谁调用的方法，谁就是当前对象。</li>
 </ol>
 <h5 id="note3"><a href="#note3" class="headerlink" title="note3"></a><font color="#9932CC" size=2 face="微软雅黑">note3</font></h5><p><font color="#FF8825" size=5 face="微软雅黑">静态代码块</font></p>
 <p><strong>1.格式</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class 类名称&#123;</span><br><span class="line">	static&#123;</span><br><span class="line">		&#x2F;&#x2F;静态代码块内容</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p><strong>2.特点：</strong><br>&emsp;&emsp;当第一次用到本类，静态代码块执行唯一一次。<br>&emsp;&emsp;静态内容总是优于非静态，所以静态代码块比构造方法先执行。</p>
 <p><strong>3.典型用途:</strong><br>&emsp;&emsp;用来一次性对静态成员变量进行赋值。</p>
 <h5 id="note4"><a href="#note4" class="headerlink" title="note4"></a><font color="#9932CC" size=2 face="微软雅黑">note4</font></h5><p><font color="#FF8825" size=5 face="微软雅黑">抽象：</font></p>
@@ -204,38 +211,34 @@
 <li>抽象方法所在类一定是抽象类，抽象类不一定包含抽象方法。</li>
 <li>抽象类不能创建对象，只能创建其非抽象子类的对象。</li>
 <li>抽象类中，可以有构造方法，是供子类创建对象时，初始化父类成员使用的。</li>
-<li>抽象类的非抽象子类必须重写父类中的所有抽象方法，否则，其子类依旧是抽象类。 </li>
+<li>抽象类的非抽象子类必须重写父类中的所有抽象方法，否则，其子类依旧是抽象类。</li>
 </ol>
 <h5 id="note5"><a href="#note5" class="headerlink" title="note5"></a><font color="#9932CC" size=2 face="微软雅黑">note5</font></h5><p><font color="#FF8825" size=5 face="微软雅黑">接口：</font></p>
 <p><strong>使用接口时需要注意：</strong></p>
 <ol>
 <li>接口没有静态代码块和构造方法</li>
-<li>一个类的直接父类是唯一的，但是一个类可以同时实现多个接口。<br>格式：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public class MyInterfaceImpl implements MyInterfaceA, MyInterfaceB&#123;</span><br><span class="line">  &#x2F;&#x2F;覆盖重写所有抽象方法</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></li>
+<li>一个类的直接父类是唯一的，但是一个类可以同时实现多个接口。<br>格式：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public class MyInterfaceImpl implements MyInterfaceA, MyInterfaceB&#123;</span><br><span class="line">  &#x2F;&#x2F;覆盖重写所有抽象方法</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
 <li>如果实现类所实现的多个接口当中，存在重复的抽象方法，只需覆盖重写一次即可。</li>
 <li>如果实现类没有覆盖重写所有接口当中的所有抽象方法，那么实现类必须是抽象类。</li>
 <li>如果实现类实现的多个接口当中，存在重复的默认方法，那么实现类一定要对冲突的默认方法进行覆盖重写。</li>
 <li>优先级：继承大于接口，即如果直接父类方法和接口默认方法产生了冲突，优先使用父类方法。</li>
 </ol>
 <ul>
-<li><strong>成员变量其实是常量</strong>，格式：<br><code>[public][static][final] 数据类型 常量名 = 数据值;</code>  </li>
+<li><p><strong>成员变量其实是常量</strong>，格式：<br><code>[public][static][final] 数据类型 常量名 = 数据值;</code><br><strong>注意：</strong><br>常量必须赋值，而且一旦赋值不可改变；<br>常量名完全大写，下划线分割，如 <font color="#00ff00" size=3 face="微软雅黑">VALUE_OF_GOOD</font> ;</p>
+</li>
+<li><p><strong>接口中最重要的是抽象方法</strong>，格式：<br><code>[public][abstract] 返回值类型 方法名(参数列表);</code><br><strong>注意：</strong>实现类必须覆盖重写接口的所有抽象方法，除非实现类是抽象类。</p>
+</li>
+<li><p><strong>从 Java 8 开始，接口允许定义静态方法</strong>，格式：<br><code>[public][static] 返回值类型 方法名(参数列表){方法体}</code><br><strong>注意：</strong>静态方法通过类名调用，而非对象</p>
+</li>
+<li><p><strong>从 Java 8 开始，接口允许定义默认方法</strong>，格式：<br><code>[public][default] 返回值类型 方法名(参数列表){方法体}</code><br><strong>注意：</strong>默认方法可以被覆盖重写</p>
+</li>
+<li><p><strong>从 Java 9 开始，接口允许定义私有方法</strong>，格式：<br>普通私有方法：<code>private 返回值类型 方法名(参数列表){方法体}</code><br>静态私有方法：<code>private static 返回值类型 方法名(参数列表){方法体}</code><br><strong>注意：</strong>private 的方法只有接口自己才能调用，不能被实现类或其他使用</p>
+</li>
 </ul>
-<p><strong>注意：</strong><br>常量必须赋值，而且一旦赋值不可改变；<br>常量名完全大写，下划线分割，如 <font color="#00ff00" size=3 face="微软雅黑">VALUE_OF_GOOD</font> ;</p>
-<ul>
-<li><strong>接口中最重要的是抽象方法</strong>，格式：<br><code>[public][abstract] 返回值类型 方法名(参数列表);</code></li>
-</ul>
-<p><strong>注意：</strong>实现类必须覆盖重写接口的所有抽象方法，除非实现类是抽象类。</p>
-<ul>
-<li><strong>从Java 8开始，接口允许定义静态方法</strong>，格式：<br><code>[public][static] 返回值类型 方法名(参数列表){方法体}</code></li>
-</ul>
-<p><strong>注意：</strong>静态方法通过类名调用，而非对象</p>
-<ul>
-<li><strong>从Java 8开始，接口允许定义默认方法</strong>，格式：<br><code>[public][default] 返回值类型 方法名(参数列表){方法体}</code></li>
-</ul>
-<p><strong>注意：</strong>默认方法可以被覆盖重写</p>
-<ul>
-<li><strong>从Java 9开始，接口允许定义私有方法</strong>，格式：<br>普通私有方法：<code>private 返回值类型 方法名(参数列表){方法体}</code><br>静态私有方法：<code>private static 返回值类型 方法名(参数列表){方法体}</code></li>
-</ul>
-<p><strong>注意：</strong>private的方法只有接口自己才能调用，不能被实现类或其他使用</p>
 <p><strong>接口的多继承：</strong></p>
 <ol>
 <li>类与类之间单继承，直接父类只有一个。</li>
@@ -245,7 +248,7 @@
 <p><font color="#0000FF" size=4 face="微软雅黑">注意事项：</font></p>
 <ol>
 <li>多个父接口当中的抽象方法如果重复，没关系。</li>
-<li>多个父接口当中的默认方法如果重复，必须覆盖重写，<font color="#ff4500" size=4 face="微软雅黑">而且default关键字不能省略</font></li>
+<li>多个父接口当中的默认方法如果重复，必须覆盖重写，<font color="#ff4500" size=4 face="微软雅黑">而且 default 关键字不能省略</font></li>
 </ol>
 
       
@@ -428,15 +431,28 @@
       <footer id="footer">
   <div class="outer">
     <div id="footer-info">
-    	<div class="footer-left">
-    		&copy; 2020 Yikko
-    	</div>
-      	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
-      	</div>
+      <div class="footer-left">
+        &copy; 2020 Yikko
+      </div>
+      <div class="footer-right">
+        <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/litten/hexo-theme-yilia"
+          target="_blank">Yilia</a> by Litten
+      </div>
     </div>
   </div>
+  
+  <!-- 不蒜子统计 -->
+  <span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+  </span>
+  <span class="post-meta-divider">|</span>
+  <span id="busuanzi_container_site_uv" style='display:none'>
+    本站访客数<span id="busuanzi_value_site_uv"></span>人
+  </span>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
 </footer>
+
     </div>
     <script>
 	var yiliaConfig = {
