@@ -6,21 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>第一篇博客 | Yikko blog</title>
+  <title>JavaSE学习笔记$1 | Yikko blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="从今天开始，记录我的一切，在这里">
+  <meta name="description" content="基础部分">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第一篇博客">
-<meta property="og:url" content="http://yoursite.com/2020/06/22/hello-world/index.html">
+<meta property="og:title" content="JavaSE学习笔记$1">
+<meta property="og:url" content="http://yoursite.com/2020/07/04/note1/index.html">
 <meta property="og:site_name" content="Yikko blog">
-<meta property="og:description" content="从今天开始，记录我的一切，在这里">
+<meta property="og:description" content="基础部分">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://images.pexels.com/photos/3563697/pexels-photo-3563697.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
-<meta property="article:published_time" content="2020-06-22T14:42:40.000Z">
-<meta property="article:modified_time" content="2020-06-24T05:37:18.674Z">
+<meta property="article:published_time" content="2020-07-04T06:51:22.000Z">
+<meta property="article:modified_time" content="2020-07-04T08:31:33.052Z">
 <meta property="article:author" content="Yikko">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://images.pexels.com/photos/3563697/pexels-photo-3563697.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
   
     <link rel="alternative" href="/atom.xml" title="Yikko blog" type="application/atom+xml">
   
@@ -152,27 +150,96 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-note1" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      第一篇博客
+      JavaSE学习笔记$1
     </h1>
   
 
         
-        <a href="/2020/06/22/hello-world/" class="archive-article-date">
-  	<time datetime="2020-06-22T14:42:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-22</time>
+        <a href="/2020/07/04/note1/" class="archive-article-date">
+  	<time datetime="2020-07-04T06:51:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>从今天开始，记录我的一切，在这里<br><img src="https://images.pexels.com/photos/3563697/pexels-photo-3563697.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""></p>
+        <h1 id="基础部分"><a href="#基础部分" class="headerlink" title="基础部分"></a>基础部分</h1><a id="more"></a>
+<h5 id="note1"><a href="#note1" class="headerlink" title="note1"></a><font color="#9932CC" size=2 face="微软雅黑">note1</font></h5><table>
+<thead>
+<tr>
+<th align="center">数据类型</th>
+<th align="center">内存占用</th>
+<th align="center">取值范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">long</td>
+<td align="center">8byte</td>
+<td align="center">2^63-1</td>
+</tr>
+<tr>
+<td align="center">float</td>
+<td align="center">4byte</td>
+<td align="center">3.4028E+38</td>
+</tr>
+</tbody></table>
+<p><strong>单精度浮点数占用内存少，可表示数据大，因为其采用科学计数法</strong></p>
+<h5 id="note2"><a href="#note2" class="headerlink" title="note2"></a><font color="#9932CC" size=2 face="微软雅黑">note2</font></h5><p><strong>byte short char 一旦发生运算，自动提升为int</strong></p>
+<h5 id="note3"><a href="#note3" class="headerlink" title="note3"></a><font color="#9932CC" size=2 face="微软雅黑">note3</font></h5><p><strong>switch 括号内只能是下列数据类型</strong></p>
+<ol>
+<li>基本数据类型：byte short char int</li>
+<li>引用数据类型：String字符串 enum枚举</li>
+</ol>
+<h5 id="note4"><a href="#note4" class="headerlink" title="note4"></a><font color="#9932CC" size=2 face="微软雅黑">note4</font></h5><p><strong>do-while 的作用:</strong></p>
+<p>如果条件判断始终为 false ,那么 for循环 while循环将会执行0次，而 do-while循环至少执行一次</p>
+<p>循环选择：<br><font color=#0099ff size=3 face="黑体">确定次数： for 否则： while</font></p>
+<h5 id="note5"><a href="#note5" class="headerlink" title="note5"></a><font color="#9932CC" size=2 face="微软雅黑">note5</font></h5><p>break 打断整个循环<br>continue 跳过当次循环，开始下次循环</p>
+<h5 id="note6"><a href="#note6" class="headerlink" title="note6"></a><font color="#9932CC" size=2 face="微软雅黑">note6</font></h5><p><strong>文件夹关系</strong></p>
+<p>Project -&gt; module -&gt; package -&gt; class -&gt; function -&gt; code</p>
+<h5 id="note7"><a href="#note7" class="headerlink" title="note7"></a><font color="#9932CC" size=2 face="微软雅黑">note7</font></h5><p><strong>Java内存划分（5个部分）</strong>  </p>
+<p>1.栈（Stack）:存放方法中的局部变量。<br>   <font color="#FF8C00" size=3 face="微软雅黑"><em>‘方法一定要在栈当中运行’</em></font></p>
+<p>  局部变量：方法参数，方法{}内部的变量<br>  作用域：一旦超出作用域，立刻从栈内存当中消失</p>
+<p>2.堆（Heap）：凡是 new 出来的东西，都在堆当中。  </p>
+<p>  堆内存里的东西都有地址值：16进制<br>  堆内存中的数据都有默认值。规则</p>
+<table>
+<thead>
+<tr>
+<th align="center">数据类型</th>
+<th align="center">内存占用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">整数：</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">浮点数：</td>
+<td align="center">0.0</td>
+</tr>
+<tr>
+<td align="center">字符：</td>
+<td align="center">\u0000</td>
+</tr>
+<tr>
+<td align="center">布尔：</td>
+<td align="center">false</td>
+</tr>
+<tr>
+<td align="center">引用类型：</td>
+<td align="center">null</td>
+</tr>
+</tbody></table>
+<p>  成员方法在堆中存入地址</p>
+<p>3.方法区（Method Area）：存储.class相关信息，包含方法信息<br>   静态区：存储静态static的东西  </p>
+<p>4.本地方法栈（Native Method Stack）：与操作系统相关  </p>
+<p>5.寄存器（pc Register）：与CPU相关  </p>
 
       
 
@@ -262,7 +329,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/06/22/hello-world/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/04/note1/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -276,15 +343,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/07/04/note1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          JavaSE学习笔记$1
-        
-      </div>
-    </a>
   
+    <a href="/2020/06/22/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">第一篇博客</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -309,7 +372,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#基础部分"><span class="toc-number">1.</span> <span class="toc-text">基础部分</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#note1"><span class="toc-number">1.0.0.0.1.</span> <span class="toc-text">note1</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#note2"><span class="toc-number">1.0.0.0.2.</span> <span class="toc-text">note2</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#note3"><span class="toc-number">1.0.0.0.3.</span> <span class="toc-text">note3</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#note4"><span class="toc-number">1.0.0.0.4.</span> <span class="toc-text">note4</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#note5"><span class="toc-number">1.0.0.0.5.</span> <span class="toc-text">note5</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#note6"><span class="toc-number">1.0.0.0.6.</span> <span class="toc-text">note6</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#note7"><span class="toc-number">1.0.0.0.7.</span> <span class="toc-text">note7</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -326,8 +389,8 @@
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "http://yoursite.com/2020/06/22/hello-world/", 
-    sourceId: "hello-world",
+    url: "http://yoursite.com/2020/07/04/note1/", 
+    sourceId: "note1",
     productKey: "true",
     target: "cloud-tie-wrapper"
   };
@@ -336,7 +399,7 @@
   
 
   
-  <div id="SOHUCS" sid="hello-world" ></div> 
+  <div id="SOHUCS" sid="note1" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
