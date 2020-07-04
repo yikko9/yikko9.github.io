@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020 | Yikko blog</title>
+  <title>JavaSE学习笔记$3 | Yikko blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Yikko blog">
-<meta property="og:url" content="http://yoursite.com/archives/2020/index.html">
+  <meta name="description" content="面向对象之细节总纳">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaSE学习笔记$3">
+<meta property="og:url" content="http://yoursite.com/2020/07/04/note3/index.html">
 <meta property="og:site_name" content="Yikko blog">
+<meta property="og:description" content="面向对象之细节总纳">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-07-04T09:19:28.000Z">
+<meta property="article:modified_time" content="2020-07-04T10:02:19.992Z">
 <meta property="article:author" content="Yikko">
 <meta name="twitter:card" content="summary">
   
@@ -146,130 +150,276 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-note3" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      JavaSE学习笔记$3
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/04/note3/" class="archive-article-date">
+
+        
+        <a href="/2020/07/04/note3/" class="archive-article-date">
   	<time datetime="2020-07-04T09:19:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-04</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/04/note3/">JavaSE学习笔记$3</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="面向对象之细节总纳"><a href="#面向对象之细节总纳" class="headerlink" title="面向对象之细节总纳"></a>面向对象之细节总纳</h1><a id="more"></a>
+<h5 id="note1"><a href="#note1" class="headerlink" title="note1"></a><font color="#9932CC" size=2 face="微软雅黑">note1</font></h5><p><font color="#FF8825" size=5 face="微软雅黑">局部变量和成员变量</font></p>
+<ol>
+<li><font color="#0000ff" size=3 face="微软雅黑">定义位置不一样</font><br>  局部变量：方法内部<br>  成员变量：类当中</li>
+<li><font color="#0000ff" size=3 face="微软雅黑">作用范围不一样</font><br>  局部变量：方法内部<br>  成员变量：整个类通用</li>
+<li><font color="#0000ff" size=3 face="微软雅黑">默认值不一样</font><br>局部变量：没有默认值<br> 成员变量：有</li>
+<li>内存位置不一样<br>局部变量：栈当中<br>成员变量：堆当中</li>
+<li>生命周期不一样<br>局部变量：随方法进栈诞生，方法出栈消失<br>成员变量：随对象创建诞生，对象被垃圾回收消失</li>
+</ol>
+<h5 id="note2"><a href="#note2" class="headerlink" title="note2"></a><font color="#9932CC" size=2 face="微软雅黑">note2</font></h5><p><font color="#FF8825" size=6 face="微软雅黑">static</font></p>
+<p><strong>1.static关键字修饰成员变量</strong><br>&emsp;&emsp;如果一个成员变量使用了static关键字修饰，这个变量不再属于对象自己，而是属于所在的类，多个对象共享同一份数据。</p>
+<p><strong>2.static关键字修饰成员方法</strong><br>&emsp;&emsp;通过static修饰的方法，就是静态方法，静态方法不属于对象，而是属于类</p>
+<p>&emsp;&emsp;非静态方法：先创建对象，通过对象调用<br>&emsp;&emsp;静态方法：不需创建对象，通过类名调用  </p>
+<p><strong>总结：</strong></p>
+<ul>
+<li>静态变量：类名称.静态变量</li>
+<li>静态方法：类名称.静态方法()</li>
+<li>对于本类静态方法，类名称. 可以省略  </li>
+</ul>
+<p><font color="#0000FF" size=4 face="微软雅黑">注意事项：</font></p>
+<ol>
+<li>静态不能直接访问非静态<br> 原因：在内存中【先】有静态内容，【后】有非静态内容<br> <font color="#FF5599" size=3 face="微软雅黑">“先人不知道后人，后人知道先人”</font></li>
+<li>静态方法中不能用this。<br> 原因：this代表当前对象，通过谁调用的方法，谁就是当前对象。</li>
+</ol>
+<h5 id="note3"><a href="#note3" class="headerlink" title="note3"></a><font color="#9932CC" size=2 face="微软雅黑">note3</font></h5><p><font color="#FF8825" size=5 face="微软雅黑">静态代码块</font></p>
+<p><strong>1.格式</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class 类名称&#123;</span><br><span class="line">	static&#123;</span><br><span class="line">		&#x2F;&#x2F;静态代码块内容</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>2.特点：</strong><br>&emsp;&emsp;当第一次用到本类，静态代码块执行唯一一次。<br>&emsp;&emsp;静态内容总是优于非静态，所以静态代码块比构造方法先执行。</p>
+<p><strong>3.典型用途:</strong><br>&emsp;&emsp;用来一次性对静态成员变量进行赋值。</p>
+<h5 id="note4"><a href="#note4" class="headerlink" title="note4"></a><font color="#9932CC" size=2 face="微软雅黑">note4</font></h5><p><font color="#FF8825" size=5 face="微软雅黑">抽象：</font></p>
+<ol>
+<li>抽象方法所在类一定是抽象类，抽象类不一定包含抽象方法。</li>
+<li>抽象类不能创建对象，只能创建其非抽象子类的对象。</li>
+<li>抽象类中，可以有构造方法，是供子类创建对象时，初始化父类成员使用的。</li>
+<li>抽象类的非抽象子类必须重写父类中的所有抽象方法，否则，其子类依旧是抽象类。 </li>
+</ol>
+<h5 id="note5"><a href="#note5" class="headerlink" title="note5"></a><font color="#9932CC" size=2 face="微软雅黑">note5</font></h5><p><font color="#FF8825" size=5 face="微软雅黑">接口：</font></p>
+<p><strong>使用接口时需要注意：</strong></p>
+<ol>
+<li>接口没有静态代码块和构造方法</li>
+<li>一个类的直接父类是唯一的，但是一个类可以同时实现多个接口。<br>格式：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public class MyInterfaceImpl implements MyInterfaceA, MyInterfaceB&#123;</span><br><span class="line">  &#x2F;&#x2F;覆盖重写所有抽象方法</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></li>
+<li>如果实现类所实现的多个接口当中，存在重复的抽象方法，只需覆盖重写一次即可。</li>
+<li>如果实现类没有覆盖重写所有接口当中的所有抽象方法，那么实现类必须是抽象类。</li>
+<li>如果实现类实现的多个接口当中，存在重复的默认方法，那么实现类一定要对冲突的默认方法进行覆盖重写。</li>
+<li>优先级：继承大于接口，即如果直接父类方法和接口默认方法产生了冲突，优先使用父类方法。</li>
+</ol>
+<ul>
+<li><strong>成员变量其实是常量</strong>，格式：<br><code>[public][static][final] 数据类型 常量名 = 数据值;</code>  </li>
+</ul>
+<p><strong>注意：</strong><br>常量必须赋值，而且一旦赋值不可改变；<br>常量名完全大写，下划线分割，如 <font color="#00ff00" size=3 face="微软雅黑">VALUE_OF_GOOD</font> ;</p>
+<ul>
+<li><strong>接口中最重要的是抽象方法</strong>，格式：<br><code>[public][abstract] 返回值类型 方法名(参数列表);</code></li>
+</ul>
+<p><strong>注意：</strong>实现类必须覆盖重写接口的所有抽象方法，除非实现类是抽象类。</p>
+<ul>
+<li><strong>从Java 8开始，接口允许定义静态方法</strong>，格式：<br><code>[public][static] 返回值类型 方法名(参数列表){方法体}</code></li>
+</ul>
+<p><strong>注意：</strong>静态方法通过类名调用，而非对象</p>
+<ul>
+<li><strong>从Java 8开始，接口允许定义默认方法</strong>，格式：<br><code>[public][default] 返回值类型 方法名(参数列表){方法体}</code></li>
+</ul>
+<p><strong>注意：</strong>默认方法可以被覆盖重写</p>
+<ul>
+<li><strong>从Java 9开始，接口允许定义私有方法</strong>，格式：<br>普通私有方法：<code>private 返回值类型 方法名(参数列表){方法体}</code><br>静态私有方法：<code>private static 返回值类型 方法名(参数列表){方法体}</code></li>
+</ul>
+<p><strong>注意：</strong>private的方法只有接口自己才能调用，不能被实现类或其他使用</p>
+<p><strong>接口的多继承：</strong></p>
+<ol>
+<li>类与类之间单继承，直接父类只有一个。</li>
+<li>类与接口之间多实现，一个类可实现多个接口。</li>
+<li>接口与接口之间多继承。</li>
+</ol>
+<p><font color="#0000FF" size=4 face="微软雅黑">注意事项：</font></p>
+<ol>
+<li>多个父接口当中的抽象方法如果重复，没关系。</li>
+<li>多个父接口当中的默认方法如果重复，必须覆盖重写，<font color="#ff4500" size=4 face="微软雅黑">而且default关键字不能省略</font></li>
+</ol>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/wepay.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/04/note3/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/04/note2/" class="archive-article-date">
-  	<time datetime="2020-07-04T08:36:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-04</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/07/04/note2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaSE学习笔记$2</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/04/note2/">JavaSE学习笔记$2</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#面向对象之细节总纳"><span class="toc-number">1.</span> <span class="toc-text">面向对象之细节总纳</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#note1"><span class="toc-number">1.0.0.0.1.</span> <span class="toc-text">note1</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#note2"><span class="toc-number">1.0.0.0.2.</span> <span class="toc-text">note2</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#note3"><span class="toc-number">1.0.0.0.3.</span> <span class="toc-text">note3</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#note4"><span class="toc-number">1.0.0.0.4.</span> <span class="toc-text">note4</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#note5"><span class="toc-number">1.0.0.0.5.</span> <span class="toc-text">note5</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/04/note1/" class="archive-article-date">
-  	<time datetime="2020-07-04T06:51:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-04</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/04/note1/">JavaSE学习笔记$1</a>
-    </h1>
+  
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: "http://yoursite.com/2020/07/04/note3/", 
+    sourceId: "note3",
+    productKey: "true",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/22/hello-world/" class="archive-article-date">
-  	<time datetime="2020-06-22T14:42:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/22/hello-world/">第一篇博客</a>
-    </h1>
+  <div id="SOHUCS" sid="note3" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "true",
+        conf: "true"
+    });
+</script>
+</script>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -292,8 +442,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
